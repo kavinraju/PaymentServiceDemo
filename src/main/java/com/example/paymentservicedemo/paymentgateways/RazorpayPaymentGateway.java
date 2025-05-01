@@ -21,7 +21,7 @@ public class RazorpayPaymentGateway implements IPaymentGateway {
         paymentLinkRequest.put("currency","INR");
         paymentLinkRequest.put("accept_partial",true);
         paymentLinkRequest.put("first_min_partial_amount",100);
-        paymentLinkRequest.put("expire_by", 1746073897);
+        paymentLinkRequest.put("expire_by", 1746093897);
         paymentLinkRequest.put("reference_id","orderId");
         paymentLinkRequest.put("description","Payment for policy no #23456");
         JSONObject customer = new JSONObject();
@@ -48,3 +48,14 @@ public class RazorpayPaymentGateway implements IPaymentGateway {
         }
     }
 }
+
+/*
+    Sample payload
+    {
+        "amount": 1000,
+        "name": "anurag khanna",
+        "email": "khannaanurag1@gmail.com",
+        "phoneNumber": "+918107112881",
+        "orderId":"order122311"
+    }
+ */
